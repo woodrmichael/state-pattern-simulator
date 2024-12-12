@@ -12,7 +12,7 @@ public class GearHigh implements Gear {
 
     @Override
     public void resolveBehavior(UserInput ui, Car car) {
-//stall when speed below 40
+        //stall when speed below 40
         int currentSpeed = car.getSpeed();
         if(ui.getKeyPressed("SPACE") && !car.getStalled()){
             if (currentSpeed < 30) {

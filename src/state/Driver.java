@@ -20,7 +20,6 @@ public class Driver extends Application {
     private static UserInput userInput;
     private static Car car;
     private static GuiImage[] guiElements;
-    //private static Graphics
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -87,30 +86,30 @@ public class Driver extends Application {
     }
 
     private static void update(){
-        if(userInput.getKeyPressed("SPACE")){
+        if (userInput.getKeyPressed("SPACE")) {
             guiElements[1].setCostume(1);
-        }else{
+        } else {
             guiElements[1].setCostume(0);
         }
-        if(userInput.getKeyPressed("UP")){
+        if (userInput.getKeyPressed("UP")) {
             guiElements[2].setCostume(1);
-        }else{
+        } else {
             guiElements[2].setCostume(0);
         }
-        if(userInput.getKeyPressed("DOWN")){
+        if(userInput.getKeyPressed("DOWN")) {
             guiElements[3].setCostume(1);
-        }else{
+        } else {
             guiElements[3].setCostume(0);
         }
 
         guiElements[4].setCostume(car.getGear());
 
-        if(car.getStalled()){
+        if (car.getStalled()) {
             guiElements[5].setCostume(0);
-        }else{
+        } else {
             guiElements[5].setCostume(1);
         }
-        if(userInput.getMousePressed() && guiElements[5].touchingMouse(pen, 1, userInput)){
+        if (userInput.getMousePressed() && guiElements[5].touchingMouse(pen, 1, userInput)) {
             car.setStalled(false);
         }
 
